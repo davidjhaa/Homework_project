@@ -1,10 +1,10 @@
 const express = require('express');
-const {signupGuide, getGuide, updateGuide, deleteGuide} = require('../Models/Guides/guideAuth')
+const {addGuide, getGuide, updateGuide, deleteGuide} = require('../Models/Guides/guideAuth')
 const guideRouter = express.Router();
 
 guideRouter
-    .route('/signup')
-    .post(signupGuide)
+    .route('/add')
+    .post(addGuide)
 
 guideRouter
     .route('/get')
@@ -17,3 +17,6 @@ guideRouter
 guideRouter
     .route('/delete')
     .post(deleteGuide)
+
+
+module.exports = guideRouter

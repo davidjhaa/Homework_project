@@ -7,7 +7,7 @@ app.use(express.json());
 app.listen(3000);
 
 const guideRouter = require('./router/guideRouter')
-// const homeStayRouter = require('./router/homeStayRouter')
+const homeStayRouter = require('./router/homeStayRouter')
 
 app.use('/guide', guideRouter);
-// app.use('/homeStays', homeStayRouter);
+app.use('/homeStays', homeStayRouter);

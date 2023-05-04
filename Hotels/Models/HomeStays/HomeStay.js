@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { db_link } = require('../secrets');
+const { db_link } = require('../../../secrets');
 
 mongoose.connect(db_link)
 .then(function(db){
@@ -33,6 +33,18 @@ const HomeStaySchema = mongoose.Schema({
     charge_pday:{
         type:Number,
         required:true
+    },
+    rooms:{
+        type:Number
+    },
+    kitchen:{
+        type:"bool",
+    },
+    airpot_dist:{
+        type:Number
+    },
+    railway_dist:{
+        type:Number
     }
 })
 
@@ -56,17 +68,17 @@ module.exports = homeStaysModel;
 
 
 
-hs_id
-hs_name
-hs_location
-hs_address
-hs_contact
-hs_speciality
-hs_facilities
-hs_charge_pday
-hs_rooms
-hs_baths
-hs_spool
-hs_kitchen
-hs_dist_airport
-hs_dist_railway
+// hs_id
+// hs_name
+// hs_location
+// hs_address
+// hs_contact
+// hs_speciality
+// hs_facilities
+// hs_charge_pday
+// hs_rooms
+// hs_baths
+// hs_spool
+// hs_kitchen
+// hs_dist_airport
+// hs_dist_railway

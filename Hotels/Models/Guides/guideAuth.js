@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const {guideModel} = require('./guide');
+const guideModel = require('./guideModel');
 
 //  CRUD OPERATION
 // CREATE
-module.exports.signupGuide = async function signupGuide(req, res){
+module.exports.addGuide = async function addGuide(req, res){
     let dataObj = req.body;
     let guide =await guideModel.create(dataObj);
     res.json({
@@ -14,11 +14,12 @@ module.exports.signupGuide = async function signupGuide(req, res){
 
 // READ
 module.exports.getGuide = async function getGuide(req,res){
-    let id = req.body.id;
-    let guide = await guideModel.findOne({id : id})
+    let data = req.body;
+    // let n = data.name;
+    let guide = await guideModel.findOne({email : data.email});
     res.json({
         message : "Guide details",
-        data:guide
+        data: guide
     });
 }
 

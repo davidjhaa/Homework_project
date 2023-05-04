@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { db_link } = require('../secrets');
+const { db_link } = require('../../../secrets');
 
 mongoose.connect(db_link)
 .then(function(db){
@@ -65,9 +65,10 @@ const guideModel = mongoose.model('guideModel', guideSchema);
 
 // (async function createGuide(){
 //     let guide = {
-//         id : 1,
-//         name : 'makshudan',
-//         age : 50
+//         id : 5,
+//         name : 'ashish',
+//         age : 24,
+//         email : 'ashsish@gmail.com'
 //     }
 //     let data = await guideModel.create(guide);
 //     console.log(data);
