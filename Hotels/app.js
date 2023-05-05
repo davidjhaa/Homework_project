@@ -11,9 +11,12 @@ const homeStayRouter = require('./router/homeStayRouter')
 const customerRouter = require('./router/customerRouter')
 const addressRouter = require('./router/addressRouter')
 const categoryRouter = require('./router/categoryRouter')
+const placeRouter = require('./router/placeRouter')
+
 
 app.use('/guide', guideRouter);
 app.use('/homeStays', homeStayRouter);
 app.use('/customer', customerRouter);
 app.use('/address', addressRouter);
-app.use('/catogary', categoryRouter);
+app.use('/category', categoryRouter);
+app.use('/place', placeRouter);
