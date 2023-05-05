@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const homeStaysModel = require('./HomeStay');
+const homeStaysModel = require('./homeStayModel');
 
 // create
 module.exports.addHomeStay = async function addHomeStay(req, res){
